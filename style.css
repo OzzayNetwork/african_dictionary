@@ -6650,3 +6650,19 @@ footer .footer-bottom.bg-light p {
 .defination-section h4{
 	font-weight: 500;
 }
+.the-word-title{
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.the-word-title span span{
+	font-size: 35px;
+	margin-left: 15px;
+	font-weight: 600;
+	cursor: pointer;
+	transform: .8s;
+}
+.the-word-title span span:hover{
+	color: #ffb606;
+}
