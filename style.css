@@ -6614,3 +6614,39 @@ footer .footer-bottom.bg-light p {
 	background: #f5f5f5;
     padding: 15px;
 }
+.d-none{
+	display: none;
+}
+
+.the-word{
+	display: inline-block;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    position: relative;
+    z-index: 1;
+	text-transform: capitalize;
+}
+
+.the-word:after{
+	background: #ffb606 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 35px;
+    position: absolute;
+    width: 10px;
+}
+
+.the-word:before{
+	background: #ffb606 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 30px;
+}
+
+.defination-section h4{
+	font-weight: 500;
+}
