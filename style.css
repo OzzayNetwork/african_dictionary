@@ -6609,3 +6609,8 @@ footer .footer-bottom.bg-light p {
   background: url(assets/img/preloader.gif) center no-repeat #fff;
   text-align: center;
 }
+
+.search-section{
+	background: #f5f5f5;
+    padding: 15px;
+}
