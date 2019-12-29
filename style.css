@@ -6666,3 +6666,7 @@ footer .footer-bottom.bg-light p {
 .the-word-title span span:hover{
 	color: #ffb606;
 }
+
+.word-thumb img{
+	height: 300px;
+}
