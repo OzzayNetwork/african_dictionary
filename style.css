@@ -6670,3 +6670,82 @@ footer .footer-bottom.bg-light p {
 .word-thumb img{
 	height: 300px;
 }
+
+.defination-section i{
+	font-family: none;
+}
+
+.defination-section i strong{
+	text-decoration: underline;
+    color: #002147;
+}
+.the-word-title .ti-plus{
+	font-size: 21px;
+	cursor: pointer;
+    font-weight: bold;
+}
+.the-word-title .ti-plus:hover{
+	transform: scale(1.2);
+	font-size: 30px;
+}
+.new-word{
+	background: #ffb606 none repeat scroll 0 0;
+    display: inline-block;
+    float: right;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 5px 20px;
+    text-transform: uppercase;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+}
+
+.add-word-form{
+	position: fixed;
+    overflow-y: auto;
+    top: 0;
+   left: -400px;
+    width: 400px;
+    padding: 50px;
+    height: 100%;
+    display: block;
+    background-color: #ffffff;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 9;
+    box-shadow: 0 15px 40px -5px rgba(0, 0, 0, 0.1);
+}
+.add-word-form.on{
+	left: -16px;
+}
+.add-word-form h4{
+	display: inline-block;
+    font-weight: 600;
+    padding-bottom: 15px;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+}
+.add-word-form h4::before{
+	background: #ffb606 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 35px;
+    position: absolute;
+    width: 10px;
+}
+.add-word-form h4::after{
+	background: #ffb606 none repeat scroll 0 0;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 30px;
+}
