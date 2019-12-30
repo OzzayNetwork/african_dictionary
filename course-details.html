@@ -311,19 +311,37 @@
 					
 					<div class="col-12">
 						<div class="form-group">
-						<!-- word -->
-						<label>example in a sentence</label>
-						<input name="word" class="form-control" placeholder="sentence" type="text">
-					</div>
+						<!-- example -->
+							<label>example in a sentence</label>
+							<textarea class="form-control" id="comments" name="comments" placeholder="Tell us the meaning of the word"></textarea></div>
 					</div>
 					
 					<div class="col-12">
 						<div class="form-group">
-						<!-- word -->
+						<!-- synonyms -->
 						<label>words with the same meaning</label>
 						<input name="word" class="form-control" placeholder="synonyms" type="text">
 					</div>
 					</div>
+					
+					<div class="col-12">
+						<label>upload media items</label>
+						<div class="form-group media-icons">
+						<!-- synonyms -->
+						<input name="audio" class="form-control d-none" placeholder="audio" type="file" id="audio">
+						<input name="video" class="form-control d-none" placeholder="video" type="file" id="video">
+						<span><label class="ti-music-alt" for="audio"></label></span>
+						<span><label class="ti-video-clapper" for="video"></label></span>
+					</div>
+					</div>
+					
+					<div class="col-md-12">
+                                <div class="row">
+                                    <button type="submit" name="submit" id="submit">
+                                        Send Message <i class="fa fa-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
 				</form>
             </div>
             <!-- End add word form -->

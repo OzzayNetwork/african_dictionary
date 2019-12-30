@@ -383,6 +383,22 @@
             // Animate loader off screen
             $(".se-pre-con").fadeOut("slow");;
         });
+		
+		// ------------------------------------------------------------------------------ //
+            // Toggle add word form
+            // ------------------------------------------------------------------------------ //
+                $(".new-word", this).on("click", function(e){
+                    e.preventDefault();
+                    $(".add-word-form").toggleClass("on");
+                    $("body").toggleClass("on-side");
+                });
+            $(".add-word-form .close-side").on("click", function(e){
+                e.preventDefault();
+                $(".add-word-form").removeClass("on");
+                $("body").removeClass("on-side");
+            });  
+            
+            
 
 
         /* ==================================================

@@ -6749,3 +6749,83 @@ footer .footer-bottom.bg-light p {
     position: absolute;
     width: 30px;
 }
+
+
+
+.add-word-form button{
+	background: #002147 none repeat scroll 0 0;
+    border: medium none;
+    color: #ffffff;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    padding: 10px 25px;
+    text-transform: uppercase;
+	
+}
+.add-word-form .form-control{
+	min-height: 43px;
+	border-radius: 0px;
+}
+
+.add-word-form textarea{
+	border: 1px solid #e7e7e7;
+    border-radius: inherit;
+    box-shadow: inherit;
+    min-height: 90px;
+}
+.add-word-form label{
+	text-transform: capitalize;
+	color: #002147;
+	font-weight: 600;
+	z-index: 1000000;
+}
+.media-icons span{
+	margin-right: 38px;
+    font-size: 27px;
+    /* padding: 15px; */
+    /* transform: rotate(45deg); */
+    margin-top: 15px;
+    margin-bottom: 25px;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    float: left;
+    justify-content: center;
+    align-items: center;
+	transition: .8s;
+	cursor: pointer;
+}
+.media-icons label:hover{
+	color: #ffb606;
+}
+.media-icons span::before, .media-icons span::after{
+	
+	position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+	border: 1.5px solid #002147;
+}
+.media-icons span::after{
+	border: 0px;
+    transform: rotate(45deg);
+    background: #e7e7e796;
+    z-index: -1;
+	
+}
+.media-icons span:hover .media-icons span::before{
+	color: #ffb606;
+	transform: rotate(45deg);
+	border-color:#ffb606; 
+}
+.media-icons label:hover .media-icons span::before{
+	transform: rotate(45deg);
+}
+.media-icons span::before:hover{
+	transform: rotate(45deg)
+}
+
