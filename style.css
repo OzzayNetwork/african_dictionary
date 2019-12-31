@@ -6863,3 +6863,30 @@ footer .footer-bottom.bg-light p {
 }
 
 
+/*crop image container*/
+
+#image_demo{
+	width: 500px;
+	height: 400px;
+}
+.cropper-containe{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column;
+	align-items: center;
+	align-content: center;
+}
+
+.croppie-container .cr-slider-wrap{
+	width: 100%;
+}
+.cr-slider{
+	border: none;
+}
+#uploadimageModal .modal-content{
+	border-radius: 0px;
+}
+#uploadimageModal{
+	background: #00000091;
+}

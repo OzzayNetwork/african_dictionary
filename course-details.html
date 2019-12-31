@@ -24,6 +24,7 @@
 	<!--    icons styling-->
 
     <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/croppie.css" rel="stylesheet" />
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/css/spacing.css" rel="stylesheet" />
     <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
@@ -286,6 +287,34 @@
             </div>
             <!-- End Side Menu -->
 			
+				
+						<!--upload and crop image modal	-->
+					<div id="uploadimageModal" class="modal" role="dialog">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									 <div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Upload & Crop Image</h4>
+									 </div>
+									 <div class="modal-body">
+										<div class="row cropper-containe">
+											<div class="col-md-12 text-center">
+												 <div id="image_demo"></div>
+											</div>
+											<div class="col-md-12" style="padding-top:60px;">
+												
+												<button class="btn btn-success crop_image">Crop & Upload Image</button>
+											</div>
+										 </div>
+									 </div>
+									 <div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									 </div>
+								</div>
+							</div>
+						</div>
+						<!--	upload and crop image modal-->
+			
 			<!-- Start add word form -->
             <div class="add-word-form">
                 <a href="#" class="close-side"><i class="fa fa-times"></i></a>
@@ -298,12 +327,13 @@
 					<label>upload image associated with the new word</label>
 					<div class="form-group upload-image">
 						<!-- image -->
-						<input name="audio" class="form-control d-none" placeholder="audio" type="file" id="image">
-						<label title="Upload an image" for="image">
+						<input type="file" name="upload_image" class="form-control" id="upload_image" accept="image/*" />
+						<label title="Upload an image" for="upload_image">
 							<span class="pe-7s-camera" for="image"></span>
 							<img src="assets/img/word.jpg">
 						</label>
 					</div>
+					
 					<div class="col-12">
 						<div class="form-group">
 						<!-- word -->
@@ -693,8 +723,10 @@
 
     <!-- jQuery Frameworks
     ============================================= -->
-    <script src="assets/js/jquery-1.12.4.min.js"></script>
+<!--    <script src="assets/js/jquery-1.12.4.min.js"></script>-->
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/croppie.min.js"></script>
     <script src="assets/js/equal-height.min.js"></script>
     <script src="assets/js/jquery.appear.js"></script>
     <script src="assets/js/jquery.easing.min.js"></script>
