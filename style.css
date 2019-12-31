@@ -6757,9 +6757,12 @@ footer .footer-bottom.bg-light p {
     border: medium none;
     color: #ffffff;
     font-family: "Poppins",sans-serif;
-    font-weight: 600;
     padding: 10px 25px;
-    text-transform: uppercase;
+	text-transform: capitalize;
+}
+
+.add-word-form button i{
+	margin-left: 7px;
 	
 }
 .add-word-form .form-control{
@@ -6817,10 +6820,11 @@ footer .footer-bottom.bg-light p {
     z-index: -1;
 	
 }
-.media-icons span:hover .media-icons span::before{
+.media-icons span:hover:before{
 	color: #ffb606;
 	transform: rotate(45deg);
 	border-color:#ffb606; 
+	transition-duration: .8s;
 }
 .media-icons label:hover .media-icons span::before{
 	transform: rotate(45deg);
@@ -6828,4 +6832,34 @@ footer .footer-bottom.bg-light p {
 .media-icons span::before:hover{
 	transform: rotate(45deg)
 }
+
+.upload-image label{
+	height: 150px;
+    width: 200px;
+    background: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.upload-image label{
+	font-size: 85px;
+	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+}
+.upload-image label:hover{
+	color: #ffb606;
+}
+.upload-image label img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: auto;
+	filter: contrast(0.5);
+}
+.upload-image label span{
+	z-index: 1;
+}
+
 
