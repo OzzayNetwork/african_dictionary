@@ -469,11 +469,9 @@
 				console.log('jQuery bind complete');
 			  });
 			}
-			reader.readAsDataURL(this.files[2]);
+//			reader.readAsDataURL(this.files[2]);
 			$('#uploadimageModal').addClass('show');
 		  });
-		
-		
 
     }); // end document ready function
 })(jQuery); // End jQuery
