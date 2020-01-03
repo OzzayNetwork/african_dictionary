@@ -438,40 +438,6 @@
         });
 		
 		
-		/* ==================================================
-           UPLOAD AND CROP IMAGE FUNCTION
-        ================================================== */
 		
-//		$('input[type=file]').each(function(index){
-//    alert(index);
-//});
-//		
-		
-			var image_crop = $('#image_demo').croppie({
-			enableExif: true,
-			viewport: {
-			  width:400,
-			  height:300,
-			  type:'square' //circle
-			},
-			boundary:{
-			  width:500,
-			  height:400
-			}
-		  });
-
-		  $('#upload_image').on('change', function(){
-			var reader = new FileReader();
-			reader.onload = function (event) {
-			  $image_crop.croppie('bind', {
-				url: event.target.result
-			  }).then(function(){
-				console.log('jQuery bind complete');
-			  });
-			}
-//			reader.readAsDataURL(this.files[2]);
-			$('#uploadimageModal').addClass('show');
-		  });
-
     }); // end document ready function
 })(jQuery); // End jQuery

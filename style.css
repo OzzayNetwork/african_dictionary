@@ -6890,3 +6890,16 @@ footer .footer-bottom.bg-light p {
 #uploadimageModal{
 	background: #00000091;
 }
+.flip-x{
+	-webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.crop-action-buttons span{
+	font-size: 25px;
+    font-weight: 900;
+}
+.btn-primary{
+	background: #002147;
+    border: medium none;
+    color: #ffffff;
+    text-transform: capitalize;

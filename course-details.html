@@ -298,18 +298,25 @@
 									 </div>
 									 <div class="modal-body">
 										<div class="row cropper-containe">
-											<div class="col-md-12 text-center">
+											<div class="col-12 text-center">
 												 <div id="image_demo">
 												</div>
 											</div>
-											<div class="col-md-12" style="padding-top:60px;">
+											<div class="col-12" style="padding-top:60px;">
 												
-												<button class="btn btn-success crop_image">Crop & Upload Image</button>
+												<div class="crop-action-buttons">
+													<span class="pe-7s-refresh flip-x rotate" data-method="rotate" data-option="-30"></span>
+													<span class="pe-7s-refresh rotate" data-method="rotate" data-option="30"></span>
+												</div>
+												<button class="btn btn-success crop_image d-none">Edit image</button>
 											</div>
 										 </div>
 									 </div>
 									 <div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										 <div class="col-12">
+											<button type="button" class="btn btn-default close-crop" data-dismiss="modal">Cancel</button>
+											<button type="button" class="btn btn-primary crop_image" data-dismiss="modal">Save</button>
+										 </div>
 									 </div>
 								</div>
 							</div>
@@ -328,10 +335,10 @@
 					<label>upload image associated with the new word</label>
 					<div class="form-group upload-image">
 						<!-- image -->
-						<input type="file" name="upload_image" class="form-control" id="upload_image" />
+						<input type="file" name="upload_image" class="form-control d-none" id="upload_image" />
 						<label title="Upload an image" for="upload_image">
 							<span class="pe-7s-camera" for="image"></span>
-							<img src="assets/img/word.jpg">
+							<img src="assets/img/no-image.jpg">
 						</label>
 					</div>
 					
@@ -740,6 +747,73 @@
     <script src="assets/js/count-to.js"></script>
     <script src="assets/js/bootsnav.js"></script>
     <script src="assets/js/main.js"></script>
+	<script>
+			$(document).ready(function(){
+				/* ==================================================
+           UPLOAD AND CROP IMAGE FUNCTION
+        ================================================== */
 
+					 $image_crop = $('#image_demo').croppie({
+					enableExif: true,
+					viewport: {
+					  width:400,
+					  height:300,
+					  type:'square' //circle
+					},
+					boundary:{
+					  width:500,
+					  height:400
+					}
+				  });
+				
+				// Option for rotating the image if needed
+					$("body").on("click", ".rotate", function () {
+						var degree = $(this).attr("data-option");
+						cropper.rotate(degree);
+					});
+
+				  $('#upload_image').on('change', function(){
+					var reader = new FileReader();
+					reader.onload = function (event) {
+					  $image_crop.croppie('bind', {
+						url: event.target.result
+					  }).then(function(){
+						console.log('jQuery bind complete');
+					  });
+					}
+					reader.readAsDataURL(this.files[0]);
+					$('#uploadimageModal').addClass('show');
+				  });
+				
+				$('.modal-header .close').on('click', function(){
+					$(this).parent().parent().parent().parent().removeClass('show');
+				})
+				
+				$('.close-crop').on('click', function(){
+					$(this).parent().parent().parent().parent().parent().removeClass('show');
+				});
+				
+				
+				//uploading cropped image
+//				$('.crop_image').click(function(event){
+//				$image_crop.croppie('result', {
+//				  type: 'canvas',
+//				  size: 'viewport'
+//				}).then(function(response){
+//				  $.ajax({
+//					url:"upload.php",
+//					type: "POST",
+//					data:{"image": response},
+//					success:function(data)
+//					{
+//					  $('#uploadimageModal').removeClass('show');
+//					  $('#uploaded_image').html(data);
+//					}
+//				  });
+//				})
+//			  });
+
+			});
+	</script>
 </body>
 </html>
